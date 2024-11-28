@@ -1,0 +1,3 @@
+- Adresse IP : 10.1.1.11
+- Masque de sous-réseau : 255.255.255.0
+- Passerelle : 10.1.1.1
