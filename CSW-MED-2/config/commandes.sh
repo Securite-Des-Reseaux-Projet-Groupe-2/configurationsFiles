@@ -10,6 +10,10 @@ exit
 interface Vlan 20
 ip address 10.1.2.3 255.255.255.0
 no shutdown
+
+interface fastEthernet 1/3
+switchport trunk encaplulation dotq1
+switchport mode trunk
 exit
 
 # Configuration HSRP
