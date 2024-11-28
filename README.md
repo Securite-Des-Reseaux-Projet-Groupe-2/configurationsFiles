@@ -8,6 +8,7 @@
 configure terminal
 vlan 10
 name MED
+exit
 
 ```
 
@@ -18,6 +19,12 @@ name MED
 interface Vlan10
 ip address 10.1.1.2 255.255.255.0
 no shutdown
+exit
+interface fastEthernet 1/2
+switchport trunk encaplulation dotq1
+switchport mode trunk
+exit
+
 
 ```
 
@@ -30,6 +37,7 @@ standby version 2
 standby 10 ip 10.1.1.1
 standby 10 priority 100
 standby 10 preempt
+exit
 
 ```
 
@@ -46,6 +54,7 @@ interface Port-channel1
 switchport trunk encaplulation dotq1
 switchport mode trunk
 switchport trunk allowed vlan 10
+exit
 
 ```
 
@@ -58,29 +67,30 @@ switchport trunk allowed vlan 10
 configure terminal
 vlan 10
 name SEC
+exit
 
 ```
 
-### Configuration de l'interface VLAN
+### Configuration de l'interface VLAN + HSRP
 
 ```
 
 interface Vlan10
 ip address 10.1.1.3 255.255.255.0
-no shutdown
-
-```
-
-### Configuration HSRP
-
-```
-
 standby version 2
 standby 10 ip 10.1.1.1
 standby 10 priority 110
 standby 10 preempt
+no shutdown
+
+
+interface fastEthernet 1/3
+switchport trunk encaplulation dotq1
+switchport mode trunk
+exit
 
 ```
+
 
 
 ### Configuration EtherChannel (Ports vers CSW-SEC-1)
@@ -91,12 +101,14 @@ interface range fastEthernet 1/0 - 1
 switchport trunk encaplulation dotq1
 switchport mode trunk
 channel-group 1 mode on
+exit
 
 
 interface Port-channel1
 switchport trunk encaplulation dotq1
 switchport mode trunk
 switchport trunk allowed vlan 10
+exit
 
 ```
 
@@ -114,6 +126,7 @@ switchport trunk allowed vlan 10
 configure terminal
 vlan 10
 name SEC
+exit
 
 ```
 
@@ -124,6 +137,7 @@ name SEC
 interface range fastEthernet 1/4 - 5
 switchport mode access
 switchport access vlan 10
+exit
 
 ```
 
@@ -134,6 +148,7 @@ switchport access vlan 10
 interface range fastEthernet 1/2 - 3
 switchport mode trunk
 switchport trunk allowed vlan 10
+exit
 
 ```
 
