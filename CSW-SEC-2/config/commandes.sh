@@ -12,6 +12,11 @@ ip address 10.1.1.3 255.255.255.0
 no shutdown
 exit
 
+interface fastEthernet 1/3
+switchport trunk encaplulation dotq1
+switchport mode trunk
+exit
+
 # Configuration HSRP
 interface Vlan 10
 standby version 2
