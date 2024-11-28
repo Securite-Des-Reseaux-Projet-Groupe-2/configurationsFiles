@@ -1,6 +1,6 @@
 # configurationsFiles
 
-## Configuration pour **CSW-MED-1** :
+## Configuration pour **CSW-SEC-1** :
 
 ### Configuration du VLAN
 
@@ -16,7 +16,7 @@ exit
 
 ```
 
-interface Vlan10
+interface Vlan 10
 ip address 10.1.1.2 255.255.255.0
 no shutdown
 exit
@@ -32,7 +32,7 @@ exit
 
 ```
 
-interface Vlan10
+interface Vlan 10
 standby version 2
 standby 10 ip 10.1.1.1
 standby 10 priority 100
@@ -71,17 +71,14 @@ exit
 
 ```
 
-### Configuration de l'interface VLAN + HSRP
+### Configuration de l'interface VLAN 
 
 ```
 
-interface Vlan10
+interface Vlan 10
 ip address 10.1.1.3 255.255.255.0
-standby version 2
-standby 10 ip 10.1.1.1
-standby 10 priority 110
-standby 10 preempt
 no shutdown
+exit
 
 
 interface fastEthernet 1/3
@@ -89,6 +86,17 @@ switchport trunk encaplulation dotq1
 switchport mode trunk
 exit
 
+```
+
+### Configuration HSRP
+
+```
+interface vlan 10
+standby version 2
+standby 10 ip 10.1.1.1
+standby 10 priority 110
+standby 10 preempt
+no shutdown
 ```
 
 
