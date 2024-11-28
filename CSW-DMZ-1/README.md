@@ -1,3 +1,4 @@
+```
 configure terminal
 !
 !Création du VLAN
@@ -44,3 +45,4 @@ exit
 spanning-tree vlan 100 priority 24576
 end
 copy running-config startup-config
+```
