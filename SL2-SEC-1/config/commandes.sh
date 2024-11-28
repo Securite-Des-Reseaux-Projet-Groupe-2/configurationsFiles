@@ -19,6 +19,8 @@ switchport mode trunk
 switchport trunk allowed vlan 10
 exit
 
+ip default-gateway 10.1.1.1
+
 # Enregistrement des config dans la cache à long terme
 exit
 copy run start
