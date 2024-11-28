@@ -1,6 +1,7 @@
 ```
 configure terminal
 !
+no ip routing
 !Création du VLAN
 vlan 100
 name DMZ
