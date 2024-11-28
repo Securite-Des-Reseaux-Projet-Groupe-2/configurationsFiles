@@ -7,7 +7,7 @@
 ```
 configure terminal
 vlan 10
-name MED
+name SEC
 exit
 
 ```
