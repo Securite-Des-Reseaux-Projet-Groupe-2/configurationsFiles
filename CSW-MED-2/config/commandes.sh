@@ -20,7 +20,7 @@ exit
 interface Vlan 20
 standby version 2
 standby 10 ip 10.1.2.1
-standby 10 priority 100
+standby 10 priority 110
 standby 10 preempt
 exit
 
