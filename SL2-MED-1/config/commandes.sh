@@ -18,4 +18,6 @@ interface range fastEthernet 1/2 - 3
 switchport mode trunk
 switchport trunk allowed vlan 20
 
+ip default-gateway 10.1.2.1
+
 
