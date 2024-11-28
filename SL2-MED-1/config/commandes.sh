@@ -18,4 +18,8 @@ interface range fastEthernet 1/2 - 3
 switchport mode trunk
 switchport trunk allowed vlan 20
 
+# Enregistrer les config dans la cache à long terme (sauf les vlans pour l'instant)
+exit
+copy run start
+
 

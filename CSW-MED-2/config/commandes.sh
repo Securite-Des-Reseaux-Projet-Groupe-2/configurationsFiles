@@ -22,15 +22,16 @@ exit
 
 # Configuration EtherChannel
 interface range fastEthernet 1/0 - 1
-switchport trunk encaplulation dotq1
+switchport trunk encapsulation dotq1
 switchport mode trunk
 channel-group 1 mode on
 
 interface Port-channel1
-switchport trunk encaplulation dotq1
+switchport trunk encapsulation dotq1
 switchport mode trunk
 switchport trunk allowed vlan 20
 exit
 
 # Enregistrer les config dans la cache à long terme (sauf les vlans pour l'instant)
+exit
 copy run start
