@@ -13,7 +13,7 @@ no shutdown
 exit
 
 interface fastEthernet 1/3
-switchport trunk encaplulation dotq1
+switchport trunk encapsulation dotq1
 switchport mode trunk
 exit
 
@@ -27,12 +27,12 @@ exit
 
 # Configuration EtherChannel
 interface range fastEthernet 1/0 - 1
-switchport trunk encaplulation dotq1
+switchport trunk encapsulation dotq1
 switchport mode trunk
 channel-group 1 mode on
 
 interface Port-channel1
-switchport trunk encaplulation dotq1
+switchport trunk encapsulation dotq1
 switchport mode trunk
 switchport trunk allowed vlan 10
 exit
