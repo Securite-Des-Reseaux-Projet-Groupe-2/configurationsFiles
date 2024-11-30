@@ -1,3 +1,3 @@
-- Adresse IP : 10.1.1.10
-- Masque de sous-réseau : 255.255.255.0
-- Passerelle : 10.1.1.1
+auto eth0
+iface eth0 inet dhcp
+  hostname PC-SEC-1
