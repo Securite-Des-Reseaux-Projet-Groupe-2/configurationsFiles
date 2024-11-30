@@ -16,7 +16,7 @@ exit
 
 interface range fastEthernet 1/2 - 3
 switchport mode trunk
-switchport trunk allowed vlan 1-2,100,1002-1005
+#switchport trunk allowed vlan 1-2,100,1002-1005
 no shut
 exit
 
