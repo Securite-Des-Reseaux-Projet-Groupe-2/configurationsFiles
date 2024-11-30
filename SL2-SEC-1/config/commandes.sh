@@ -1,6 +1,6 @@
 # Conf t
 conf t
-
+no ip routing
 # Configuration Vlan
 vlan 10
 name SEC
