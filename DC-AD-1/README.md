@@ -1,0 +1,6 @@
+## Documentation brève Configuration DC-AD-1
+
+- On va tout définir en statique étant un Serveur
+- On lui attribue l'ip 10.1.3.10 avec un masque en /24 dans le VLAN 30
+- On mentionne l'adresse IP passerelle virtuel 10.1.3.1
+- On lui donne un "nameserver" (en l'occurence ici 1.1.1.1)
