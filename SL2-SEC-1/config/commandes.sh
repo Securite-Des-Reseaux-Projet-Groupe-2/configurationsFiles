@@ -16,7 +16,7 @@ exit
 
 interface range fastEthernet 1/2 - 3
 switchport mode trunk
-switchport trunk allowed vlan 10
+# switchport trunk allowed vlan 10
 exit
 
 ip default-gateway 10.1.1.1

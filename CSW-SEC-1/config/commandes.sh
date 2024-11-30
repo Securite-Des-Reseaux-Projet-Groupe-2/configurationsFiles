@@ -34,7 +34,7 @@ channel-group 1 mode on
 interface Port-channel1
 switchport trunk encapsulation dot1q
 switchport mode trunk
-switchport trunk allowed vlan 10
+# switchport trunk allowed vlan 10
 exit
 
 # Enregistrement des config dans la cache à long terme
