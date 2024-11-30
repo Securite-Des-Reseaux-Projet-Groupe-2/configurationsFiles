@@ -1,6 +1,6 @@
 # Conf t
 conf t
-
+no ip routing
 # Configuration VLAN
 vlan 20
 name MED
