@@ -17,6 +17,29 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
 
+interface fastEthernet 0/0
+ip address 10.1.0.18 255.255.255.252
+no shutdown
+exit
+
+#configuration fastEthernet 0/1
+
+interface fastEthernet 0/1
+ip address 10.1.0.22 255.255.255.252
+no shutdown
+exit
+
+
+#configuration ospf
+
+ip routing
+router ospf 1
+network 10.1.0.16 0.0.0.3 area 0
+network 10.1.0.20 0.0.0.3 area 0
+network 10.1.1.0 0.0.0.255 area 0
+passive-interface fastEthernet 1/3
+exit
+
 # Configuration HSRP
 interface Vlan 10
 standby version 2
