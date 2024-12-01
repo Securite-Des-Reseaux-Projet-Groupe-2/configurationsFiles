@@ -1,5 +1,18 @@
 conf t
 
+# Configuration EtherChannel
+interface range fastEthernet 1/0 - 1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+channel-group 1 mode on
+exit
+
+interface Port-channel1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+# switchport trunk allowed vlan 20
+exit
+
 #configuration fastEthernet 0/0
 
 interface fastEthernet 0/0
