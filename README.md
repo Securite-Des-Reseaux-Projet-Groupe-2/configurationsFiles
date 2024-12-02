@@ -1,3 +1,7 @@
+(tmp)  
+remind : SL3 securités fonctionnelles => CDP / ACL / NAT
+
+
 
 ![img](https://github.com/user-attachments/assets/0e9c7b58-020d-4991-9bbc-acb626e4e39d)
 
