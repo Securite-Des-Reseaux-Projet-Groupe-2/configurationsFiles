@@ -23,6 +23,19 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
 
+#CSWMED2 to CORE1
+interface fastEthernet 1/3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+exit
+
+#CSWMED2 to CORE2
+interface fastEthernet 1/4
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+exit
 
 # Configuration EtherChannel
 interface range fastEthernet 1/0 - 1
