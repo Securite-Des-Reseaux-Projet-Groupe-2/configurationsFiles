@@ -18,7 +18,7 @@ standby 20 name MED
 no shut
 exit 
 
-interface fastEthernet 1/3
+interface fastEthernet 1/2
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
