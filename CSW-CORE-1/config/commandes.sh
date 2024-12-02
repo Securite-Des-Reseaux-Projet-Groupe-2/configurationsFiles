@@ -17,7 +17,7 @@ standby version 2
 standby 220 ip 10.1.2.254
 standby 220 priority 120
 standby 220 preempt
-standby 220 name MED
+standby 220 name MEDCORE
 no shut
 exit 
 
@@ -29,7 +29,7 @@ standby version 2
 standby 110 ip 10.1.1.254
 standby 110 priority 120
 standby 110 preempt
-standby 110 name MED
+standby 110 name SECCORE
 no shut
 exit 
 
