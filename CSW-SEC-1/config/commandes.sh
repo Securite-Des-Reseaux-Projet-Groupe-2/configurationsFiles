@@ -14,7 +14,7 @@ standby version 2
 standby 10 ip 10.1.1.1
 standby 10 priority 100
 standby 10 preempt
-standby 10 name SERV
+standby 10 name SEC
 no shut
 exit
 
