@@ -14,10 +14,10 @@ interface Vlan 20
 ip address 10.1.2.252 255.255.255.0
 # Configuration HSRP
 standby version 2
-standby 220 ip 10.1.2.254
-standby 220 priority 120
-standby 220 preempt
-standby 220 name MEDCORE
+standby 20 ip 10.1.2.254
+standby 20 priority 120
+standby 20 preempt
+standby 20 name MED
 no shut
 exit 
 
@@ -26,10 +26,10 @@ interface Vlan 10
 ip address 10.1.1.252 255.255.255.0
 # Configuration HSRP
 standby version 2
-standby 110 ip 10.1.1.254
-standby 110 priority 120
-standby 110 preempt
-standby 110 name SECCORE
+standby 10 ip 10.1.1.254
+standby 10 priority 120
+standby 10 preempt
+standby 10 name SEC
 no shut
 exit 
 
@@ -37,7 +37,7 @@ exit
 interface range FastEthernet1/0 - 1
 switchport trunk encapsulation dot1q
 switchport mode trunk
-channel-group 1 mode active
+channel-group 1 mode on
 exit
 interface Port-channel1
 switchport trunk encapsulation dot1q

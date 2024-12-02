@@ -11,7 +11,7 @@ interface Vlan 20
 ip address 10.1.2.2 255.255.255.0
 # Configuration HSRP
 standby version 2
-standby 20 ip 10.1.2.1
+standby 20 ip 10.1.2.254
 standby 20 priority 110
 standby 20 preempt
 standby 20 name MED
