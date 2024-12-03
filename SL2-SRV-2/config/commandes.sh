@@ -11,10 +11,14 @@ exit
 interface fastEthernet 1/10
 switchport mode access
 switchport access vlan 30
+no shut
+exit
 
 interface fastEthernet 1/11
 switchport mode access
 switchport access vlan 30
+no shut
+exit
 
 # Configuration des pors TRUNK
 interface range fastEthernet 1/4
@@ -27,7 +31,12 @@ exit
 
 interface vlan 30
 ip address 10.1.3.242 255.255.255.0
+no shut
+exit
+
 ip default-gateway 10.1.3.1
+
+#ajouter spanning-tree
 
 # Enregistrer les config dans la cache à long terme (sauf les vlans pour l'instant)
 exit
