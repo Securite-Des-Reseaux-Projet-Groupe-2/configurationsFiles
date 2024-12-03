@@ -35,9 +35,10 @@ exit
 
 interface vlan 20
 ip address 10.1.2.241 255.255.255.0
-ip default-gateway 10.1.2.1
 no shut
 exit
+
+ip default-gateway 10.1.2.254
 
 #ajouter spanning-tree
 
