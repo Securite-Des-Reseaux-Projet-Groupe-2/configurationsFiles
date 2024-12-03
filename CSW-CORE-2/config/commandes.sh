@@ -15,9 +15,9 @@ ip address 10.1.2.253 255.255.255.0
 # Configuration HSRP
 standby version 2
 standby 20 ip 10.1.2.254
-standby 20 priority 90
+standby 20 priority 100
 standby 20 preempt
-standby 20 name MEDCORE
+standby 20 name MED
 no shut
 exit 
 
@@ -27,9 +27,9 @@ ip address 10.1.1.253 255.255.255.0
 # Configuration HSRP
 standby version 2
 standby 10 ip 10.1.1.254
-standby 10 priority 90
+standby 10 priority 100
 standby 10 preempt
-standby 10 name SECCORE
+standby 10 name SEC
 no shut
 exit 
 
