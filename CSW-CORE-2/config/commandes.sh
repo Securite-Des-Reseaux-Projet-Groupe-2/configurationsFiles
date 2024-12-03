@@ -55,6 +55,11 @@ ip address 10.1.0.53 255.255.255.252
 no shutdown
 exit
 
+interface FastEthernet1/7
+no switchport
+ip address 10.1.0.77 255.255.255.252
+no shutdown
+exit
 
 ip routing
 router ospf 1

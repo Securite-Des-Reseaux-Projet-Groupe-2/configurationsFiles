@@ -29,7 +29,7 @@ exit
 
 interface FastEthernet1/3 
 no switchport
-ip address 10.1.0.53 255.255.255.252
+ip address 10.1.0.54 255.255.255.252
 no shutdown
 exit
 
