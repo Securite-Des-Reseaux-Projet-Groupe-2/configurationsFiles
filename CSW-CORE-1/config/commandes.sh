@@ -31,30 +31,30 @@ no shutdown
 exit
 
 # Trunk vers CSW-SEC-1 (Distribution Switch) .16
-interface FastEthernet1/2 .16
+interface FastEthernet1/2 #.16
 no switchport
 ip address 10.1.0.17 255.255.255.252
 no shutdown
 exit
-interface FastEthernet1/4 .40
+interface FastEthernet1/4 #.40
 no switchport
 ip address 10.1.0.41 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/5 .48
+interface FastEthernet1/5 #.48
 no switchport
 ip address 10.1.0.49 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/6 .32
+interface FastEthernet1/6 #.32
 no switchport
 ip address 10.1.0.33 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/7 .36
+interface FastEthernet1/7 #.36
 no switchport
 ip address 10.1.0.37 255.255.255.252
 no shutdown
