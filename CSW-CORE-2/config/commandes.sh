@@ -37,19 +37,19 @@ ip address 10.1.0.29 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/6 #.44
+interface FastEthernet1/6 
 no switchport
 ip address 10.1.0.45 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/2 #.48
+interface FastEthernet1/2 
 no switchport
 ip address 10.1.0.49 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/3 #.52
+interface FastEthernet1/3 
 no switchport
 ip address 10.1.0.53 255.255.255.252
 no shutdown

@@ -27,13 +27,13 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
 
-interface FastEthernet1/3 #.52
+interface FastEthernet1/3 
 no switchport
 ip address 10.1.0.53 255.255.255.252
 no shutdown
 exit
 
-interface FastEthernet1/7 #.36
+interface FastEthernet1/7 
 no switchport
 ip address 10.1.0.38 255.255.255.252
 no shutdown
