@@ -31,7 +31,7 @@ exit
 
 interface vlan 10
 ip address 10.1.1.241 255.255.255.0
-ip default-gateway 10.1.1.1
+ip default-gateway 10.1.1.254
 
 end
 copy run start
