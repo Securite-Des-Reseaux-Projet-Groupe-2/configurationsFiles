@@ -1,39 +1,42 @@
-# Conf t
+# Configure terminal
 conf t
 ip routing
 # Configuration VLAN
-vlan 20
-name MED
+vlan 30
+name SRV
 exit
 
 # Configuration de l'interface VLAN
-interface Vlan 20
-ip address 10.1.2.2 255.255.255.0
-# Configuration HSRP
+interface Vlan 30
+ip address 10.1.3.2 255.255.255.0
 standby version 2
-standby 20 ip 10.1.2.254
-standby 20 priority 90
-standby 20 preempt
-standby 20 name MED
-no shut
-exit 
+standby 30 ip 10.1.3.1
+standby 30 priority 110
+standby 30 preempt
+standby 30 name SRV
+no shutdown
 
-interface fastEthernet 1/2
+# Config interfaces vers Switch L2
+interface fastEthernet 1/4
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
 
-#CSWMED1 to CORE1
-interface fastEthernet 1/3
+interface fastEthernet 1/5
+switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
+
+interface FastEthernet1/6 
 no switchport
-ip address 10.1.0.22 255.255.255.252
+ip address 10.1.0.34 255.255.255.252
 no shutdown
 exit
 
-#CSWMED1 to CORE2
-interface fastEthernet 1/5
+
+interface FastEthernet1/2 
 no switchport
-ip address 10.1.0.26 255.255.255.252
+ip address 10.1.0.50 255.255.255.252
 no shutdown
 exit
 
@@ -50,11 +53,11 @@ switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
 exit
 
 router ospf 1
-network 10.1.0.20 0.0.0.3 area 0
-network 10.1.0.24 0.0.0.3 area 0
-network 10.1.2.0 0.0.0.255 area 0
+network 10.1.0.32 0.0.0.3 area 0
+network 10.1.0.48 0.0.0.3 area 0
+network 10.1.3.0 0.0.0.255 area 0
 exit
 
 # Enregistrer les config dans la cache à long terme (sauf les vlans pour l'instant)
 exit
-copy run start
+copy running-config startup-config
