@@ -11,10 +11,10 @@ interface Vlan 10
 ip address 10.1.1.2 255.255.255.0
 # Configuration HSRP
 standby version 2
-standby 110 ip 10.1.1.1
-standby 110 priority 110
-standby 110 preempt
-standby 110 name SEC
+standby 10 ip 10.1.1.254
+standby 10 priority 90
+standby 10 preempt
+standby 10 name SEC
 no shut
 exit
 
