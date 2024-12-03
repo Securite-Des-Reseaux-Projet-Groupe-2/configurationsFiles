@@ -25,16 +25,16 @@ exit
 
 #CSWMED2 to CORE1
 interface fastEthernet 1/3
-switchport trunk encapsulation dot1q
-switchport mode trunk
-switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+no switchport
+ip address 10.1.0.18 255.255.255.252
+no shutdown
 exit
 
 #CSWMED2 to CORE2
 interface fastEthernet 1/4
-switchport trunk encapsulation dot1q
-switchport mode trunk
-switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+no switchport
+ip address 10.1.0.30 255.255.255.252
+no shutdown
 exit
 
 # Configuration EtherChannel
@@ -47,6 +47,12 @@ interface Port-channel1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+exit
+
+ip routing
+router ospf 1
+network 10.1.0.28 0.0.0.3 area 0
+network 10.1.0.16 0.0.0.3 area 0
 exit
 
 # Enregistrement des config dans la cache à long terme

@@ -45,18 +45,25 @@ switchport mode trunk
 switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
 exit
 
-# Trunk vers CSW-MED-1 (Distribution Switch)
+# Trunk vers CSW-MED-1 (Distribution Switch) .20
 interface FastEthernet1/3
-switchport trunk encapsulation dot1q
-switchport mode trunk
-switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+no switchport
+ip address 10.1.0.21 255.255.255.252
 no shutdown
 exit
 
-# Trunk vers CSW-SEC-1 (Distribution Switch)
+# Trunk vers CSW-SEC-1 (Distribution Switch) .16
 interface FastEthernet1/2
-switchport trunk encapsulation dot1q
-switchport mode trunk
-switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+no switchport
+ip address 10.1.0.17 255.255.255.252
 no shutdown
 exit
+
+ip routing
+router ospf 1
+network 10.1.0.20 0.0.0.3 area 0
+network 10.1.0.16 0.0.0.3 area 0
+exit
+
+end 
+wr
