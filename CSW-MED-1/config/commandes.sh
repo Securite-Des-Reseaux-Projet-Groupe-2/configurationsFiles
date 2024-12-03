@@ -49,10 +49,10 @@ switchport mode trunk
 switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
 exit
 
-ip routing
 router ospf 1
 network 10.1.0.20 0.0.0.3 area 0
 network 10.1.0.24 0.0.0.3 area 0
+network 10.1.2.0 0.0.0.255 area 0
 exit
 
 # Enregistrer les config dans la cache à long terme (sauf les vlans pour l'instant)

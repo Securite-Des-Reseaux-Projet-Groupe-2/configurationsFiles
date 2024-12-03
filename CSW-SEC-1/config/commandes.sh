@@ -37,6 +37,8 @@ ip address 10.1.0.30 255.255.255.252
 no shutdown
 exit
 
+
+
 # Configuration EtherChannel
 interface range fastEthernet 1/0 - 1
 switchport trunk encapsulation dot1q
@@ -53,6 +55,7 @@ ip routing
 router ospf 1
 network 10.1.0.28 0.0.0.3 area 0
 network 10.1.0.16 0.0.0.3 area 0
+network 10.1.1.0 0.0.0.255 area 0
 exit
 
 # Enregistrement des config dans la cache à long terme

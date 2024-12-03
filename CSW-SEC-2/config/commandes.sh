@@ -22,7 +22,11 @@ interface fastEthernet 1/3
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
-
+interface FastEthernet1/4 .40
+no switchport
+ip address 10.1.0.42 255.255.255.252
+no shutdown
+exit
 
 # Configuration EtherChannel
 interface range fastEthernet 1/0 - 1
@@ -34,6 +38,14 @@ interface Port-channel1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 1-2,10,20,30,100,1002-1005
+exit
+
+
+
+ip routing
+router ospf 1
+network 10.1.0.40 0.0.0.3 area 0
+network 10.1.1.0 0.0.0.255 area 0
 exit
 
 # Enregistrement des config dans la cache à long terme

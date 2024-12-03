@@ -35,13 +35,34 @@ interface FastEthernet1/4
 no switchport
 ip address 10.1.0.29 255.255.255.252
 no shutdown
+exit
+
+interface FastEthernet1/6 #.44
+no switchport
+ip address 10.1.0.45 255.255.255.252
 no shutdown
 exit
+
+interface FastEthernet1/2 #.48
+no switchport
+ip address 10.1.0.49 255.255.255.252
+no shutdown
+exit
+
+interface FastEthernet1/3 #.52
+no switchport
+ip address 10.1.0.53 255.255.255.252
+no shutdown
+exit
+
 
 ip routing
 router ospf 1
 network 10.1.0.24 0.0.0.3 area 0
 network 10.1.0.28 0.0.0.3 area 0
+network 10.1.0.44 0.0.0.3 area 0
+network 10.1.0.48 0.0.0.3 area 0
+network 10.1.0.52 0.0.0.3 area 0
 exit
 
 end 
